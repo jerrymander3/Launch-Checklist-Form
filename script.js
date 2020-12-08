@@ -42,15 +42,17 @@
                     launchStatus.style.color = "red";
                     if (fuelLevelInput.value < 10000){
                         document.getElementById("fuelStatus").innerHTML = `Fuel level too low for launch`;  
+                    } else {
+                        document.getElementById("fuelStatus").innerHTML = `Fuel level high enough for launch`;
                     }
                     if (cargoMassInput.value > 10000){
                         document.getElementById("cargoStatus").innerHTML = "Cargo mass too high for launch";
+                    } else {
+                        document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch";
                     }
                 } else {
                     launchStatus.innerHTML = "Shuttle is ready for launch!";
-                    launchStatus.style.color = "green";
-                    document.getElementById("fuelStatus").innerHTML = `Fuel level high enough for launch`;
-                    document.getElementById("cargoStatus").innerHTML = "Cargo mass low enough for launch";
+                    launchStatus.style.color = "green"; 
                 }
                 
             });
